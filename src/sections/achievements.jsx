@@ -1,5 +1,6 @@
 import { Container } from "../components/container";
 import { cn } from "../lib/tw-merge";
+import { ArrowDownRight } from "lucide-react";
 
 const Achievements = () => {
   const GRID_OBJ = [
@@ -64,17 +65,26 @@ const AchievementCard = ({ card, className, index }) => {
         "flex h-[260px] flex-col justify-between rounded-2xl bg-[#202C3380] p-7 lg:h-[370px] lg:w-full",
         className,
         {
-          "bg-[#003CD6]": index === 5,
+          "group cursor-pointer bg-[#003CD6] transition-all duration-500 hover:bg-[#202C3380]":
+            index === 5,
         },
       )}
     >
-      <h2
-        className={`text-[20px] text-[#687076] ${
-          index === 5 ? "text-white" : ""
-        }`}
-      >
-        {card.heading}
-      </h2>
+      <div className="relative h-full">
+        <h2
+          className={`text-[20px] text-[#687076] ${
+            index === 5 ? "text-white" : ""
+          }`}
+        >
+          {card.heading}
+        </h2>
+        <ArrowDownRight
+          className={`absolute bottom-0 right-2 size-20 text-[20px] text-white transition-all duration-500 group-hover:rotate-180 ${
+            index === 5 ? "block" : "hidden"
+          }`}
+        />
+      </div>
+
       <p className="text-[90px] text-white">{card.description}</p>
     </div>
   );

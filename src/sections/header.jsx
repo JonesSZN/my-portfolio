@@ -9,10 +9,7 @@ const UL = () => {
       <ul className="hidden flex-row items-center gap-9 lg:flex">
         {LIST.map((item) => (
           <li>
-            <a
-              className="text-[16px] text-white transition-all duration-300 hover:text-red-600"
-              href="/"
-            >
+            <a className="text-[16px] text-white" href="/">
               {item}
             </a>
           </li>
@@ -22,14 +19,17 @@ const UL = () => {
   );
 };
 
-const Header = () => {
+const Header = ({ bg }) => {
   return (
     <header className="fixed z-[999] flex w-full justify-center bg-[#000000] py-4">
       <Container>
         <nav className="z-50 flex items-center justify-between">
-          <p className="cursor-pointer text-[24px] text-white transition-all duration-300 hover:text-red-600">
+          <a
+            href="/"
+            className="cursor-pointer text-[24px] text-white transition-all duration-300 hover:text-red-600"
+          >
             Marcus Muller
-          </p>
+          </a>
           <UL />
           <a
             className="hidden text-[16px] font-bold text-white transition-all duration-300 hover:text-red-600 lg:block"
