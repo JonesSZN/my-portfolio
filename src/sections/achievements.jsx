@@ -62,7 +62,7 @@ const AchievementCard = ({ card, className, index }) => {
   return (
     <div
       className={cn(
-        "flex h-[260px] flex-col justify-between rounded-2xl bg-[#202C3380] p-7 lg:h-[370px] lg:w-full",
+        "flex h-[260px] flex-col justify-between rounded-2xl bg-[#202C3380] p-7 lg:h-[320px] lg:w-full",
         className,
         {
           "group cursor-pointer bg-[#003CD6] transition-all duration-500 hover:bg-[#202C3380]":
