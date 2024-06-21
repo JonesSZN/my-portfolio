@@ -14,28 +14,32 @@ const Heading = () => {
 const Cards = () => {
   const CARDS_OBJ = [
     {
-      image: "images/cargo-image.svg",
+      image: "images/hrflow-logo.webp",
       Heading:
         "We seamlessly blend cutting-edge technology, global connectivity, and unmatched expertise to redefine how businesses approach their supply chain challenges.",
-      siteimage: "images/opencore-bg.png",
+      siteimage: "images/hrflow-bg.png",
+      link: "https://jonesszn.github.io/hr-flow/",
     },
     {
-      image: "images/agent-image.svg",
+      image: "images/mediflow-logo.svg",
       Heading:
         "We understand the importance of protecting what matters most to you. With our comprehensive insurance solutions, we aim to provide you with the peace of mind you deserve.",
       siteimage: "images/mediflow-bg.png",
+      link: "https://jonesszn.github.io/mediflow/",
     },
     {
-      image: "images/slope-image.svg",
+      image: "images/smarter-logo.svg",
       Heading:
         "Slope is a cutting-edge fintech company at the forefront of financial innovation. We provide innovative solutions and services that empower individuals and businesses.",
-      siteimage: "images/slope-site-image.jpg",
+      siteimage: "images/smarter-bg.png",
+      link: "https://jonesszn.github.io/smarter-site/",
     },
     {
-      image: "images/handcrafts-image.svg",
+      image: "images/origin-logo.svg",
       Heading:
         "Natural and organic wood products that will perfectly suit your interior.",
-      siteimage: "images/handcrafts-site-image.jpg",
+      siteimage: "images/origin-bg.png",
+      link: "https://jonesszn.github.io/origin-site/",
     },
   ];
 
@@ -45,12 +49,23 @@ const Cards = () => {
         <div className="group relative h-[599px] w-[360px] overflow-hidden rounded-2xl bg-[#ECEDEE] pl-8 pt-8 lg:h-[738px] lg:w-full lg:pl-12 lg:pt-12">
           <div className="flex h-full w-full flex-col justify-between">
             <div>
-              <img className="mb-6" src={card.image} alt="" />
-              <p className="text-[#18px] text-[#687076]">{card.Heading}</p>
+              <img
+                className="mb-4 h-[50px] w-[160px] object-contain"
+                src={card.image}
+                alt=""
+              />
+
+              <p className="max-w-[460px] text-[#18px] text-[#687076]">
+                {card.Heading}
+              </p>
             </div>
             <div>
               <button className="group mb-8 flex items-center gap-2 font-bold text-[#003cd6] transition-all duration-200 hover:text-[#11181C]">
-                More about project
+                <a href={card.link} target="_blank" rel="noopener noreferrer">
+                  {" "}
+                  View Project
+                </a>
+
                 <ChevronRight className="text-[#003cd6] transition-all duration-200 group-hover:text-[#11181C]" />
               </button>
 
