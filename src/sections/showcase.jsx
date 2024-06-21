@@ -17,13 +17,13 @@ const Cards = () => {
       image: "images/cargo-image.svg",
       Heading:
         "We seamlessly blend cutting-edge technology, global connectivity, and unmatched expertise to redefine how businesses approach their supply chain challenges.",
-      siteimage: "images/cargo-site-image.png",
+      siteimage: "images/opencore-bg.png",
     },
     {
       image: "images/agent-image.svg",
       Heading:
         "We understand the importance of protecting what matters most to you. With our comprehensive insurance solutions, we aim to provide you with the peace of mind you deserve.",
-      siteimage: "images/agent-site-image.jpg",
+      siteimage: "images/mediflow-bg.png",
     },
     {
       image: "images/slope-image.svg",
@@ -42,18 +42,25 @@ const Cards = () => {
   return (
     <div className="mb-12 grid gap-16 lg:grid-cols-2">
       {CARDS_OBJ.map((card) => (
-        <div className="group relative h-[599px] w-[360px] rounded-2xl bg-[#ECEDEE] px-8 pb-44 pt-9 lg:h-[738px] lg:w-full lg:px-12 lg:pt-12">
-          <img className="mb-6" src={card.image} alt="" />
-          <p className="text-[#18px] text-[#687076]">{card.Heading}</p>
-          <button className="group absolute top-72 flex items-center gap-2 font-bold text-[#003cd6] transition-all duration-200 hover:text-[#11181C]">
-            More about project
-            <ChevronRight className="text-[#003cd6] transition-all duration-200 group-hover:text-[#11181C]" />
-          </button>
-          <img
-            className="absolute bottom-0 right-0 h-[247px] w-[331px] lg:h-auto lg:w-auto"
-            src={card.siteimage}
-            alt=""
-          />
+        <div className="group relative h-[599px] w-[360px] overflow-hidden rounded-2xl bg-[#ECEDEE] pl-8 pt-8 lg:h-[738px] lg:w-full lg:pl-12 lg:pt-12">
+          <div className="flex h-full w-full flex-col justify-between">
+            <div>
+              <img className="mb-6" src={card.image} alt="" />
+              <p className="text-[#18px] text-[#687076]">{card.Heading}</p>
+            </div>
+            <div>
+              <button className="group mb-8 flex items-center gap-2 font-bold text-[#003cd6] transition-all duration-200 hover:text-[#11181C]">
+                More about project
+                <ChevronRight className="text-[#003cd6] transition-all duration-200 group-hover:text-[#11181C]" />
+              </button>
+
+              <img
+                className="w-full rounded-tl-xl object-cover object-top shadow-sm shadow-black/20 lg:aspect-[1.4]"
+                src={card.siteimage}
+                alt=""
+              />
+            </div>
+          </div>
         </div>
       ))}
     </div>

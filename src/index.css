@@ -17,18 +17,8 @@ html {
   }
 }
 
-.logos {
-  overflow: hidden;
-  white-space: nowrap;
-  display: flex;
-
-  gap: 800px;
-}
-
 .logos-slide {
-  white-space: nowrap;
-  display: flex;
-  animation: 8s slide infinite linear;
+  animation: 15s slide infinite linear;
 }
 .logos-slide img {
   height: 30px;
