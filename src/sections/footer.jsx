@@ -6,7 +6,7 @@ const TopFooter = () => {
       {/* left side */}
       <div className="flex flex-col items-center gap-4 lg:flex-row lg:gap-32">
         <p className="cursor-pointer text-[22px] font-bold text-black">
-          Marcus Muller
+          Parker Jones
         </p>
         <UL />
       </div>
@@ -35,10 +35,13 @@ const BottomFooter = () => {
   return (
     <div className="flex flex-col items-center justify-between gap-1 text-[18px] text-[#687076] lg:flex-row lg:gap-0">
       <p className="text-center">
-        © 2024 Marcus Muller. All rights reserved. Licensing
+        © 2024 Parker Jones. All rights reserved. Licensing
       </p>
-      <p className="max-w-[190px] text-center lg:max-w-[600px]">
-        Template by wCopilot. Powered by Webflow
+      <p className="max-w-[250px] text-center lg:max-w-[600px]">
+        Developed by Parker Jones. Powered by{" "}
+        <span className="cursor-pointer font-bold text-[#3D5F81] underline">
+          <a href="https://www.opencoregroup.com/">OpenCore Group</a>
+        </span>
       </p>
     </div>
   );

@@ -11,14 +11,15 @@ const Specialist = () => {
             src="images/colors-image.png"
             alt=""
           />
-          <h1 className="z-50 mb-8 max-w-[450px] text-center text-4xl font-semibold text-white lg:text-5xl">
-            I'm known as the Webflow specialist
+          <h1 className="z-50 mb-8 max-w-[500px] text-center text-4xl font-semibold text-white lg:text-5xl">
+            I Specialize in Frontend Development
           </h1>
           <p className="z-40 mb-12 max-w-[800px] text-center text-[20px] text-white lg:max-w-[770px]">
-            Passionate Webflow developer with a flair for turning design dreams
-            into functional, pixel-perfect websites. I specialize in crafting
-            seamless digital experiences, and I'm excited to showcase a
-            selection of my work here.
+            Specializing in the art of front-end development, I harness the
+            power of HTML, CSS, TailwindCSS, and React to create websites that
+            are not only aesthetically pleasing but also intuitively functional.
+            My focus is on delivering user-centric digital experiences that are
+            both engaging and efficient.
           </p>
           <Button text={"About Me"} />
         </div>

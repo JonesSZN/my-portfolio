@@ -17,12 +17,12 @@ const Achievements = () => {
       description: "1",
     },
     {
-      heading: "Myy years experience",
-      description: "8",
+      heading: "My years experience",
+      description: "1",
     },
     {
       heading: "Succesfully finished projects",
-      description: "34",
+      description: "20",
     },
     {
       heading: "Let's work together",

@@ -28,7 +28,7 @@ const Header = ({ bg }) => {
             href="/"
             className="cursor-pointer text-[24px] text-white transition-all duration-300 hover:text-red-600"
           >
-            Marcus Muller
+            Parker Jones
           </a>
           <UL />
           <a

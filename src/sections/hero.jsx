@@ -7,7 +7,7 @@ const Content = () => {
       <div className="group mb-8 flex max-w-[300px] items-center justify-center rounded-md bg-[#202C3380] px-[3px] py-[7px] text-[20px] text-white lg:px-[6px] lg:py-[8px]">
         <h1 class="relative overflow-hidden py-2">
           <span class="absolute inset-x-0 bottom-0 h-1 origin-left scale-x-0 bg-white transition-transform duration-200 ease-in-out group-hover:scale-x-100"></span>
-          Hello I'm Marcus, and I create...
+          Hello I'm Parker, and I create...
         </h1>
       </div>
 
