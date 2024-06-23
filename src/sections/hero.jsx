@@ -4,6 +4,14 @@ import { motion } from "framer-motion";
 
 const Content = () => {
   return (
+    <div className="flex">
+      <LeftContent />
+    </div>
+  );
+};
+
+const LeftContent = () => {
+  return (
     <motion.div
       initial={{
         x: "-100vw",
@@ -37,6 +45,7 @@ const Content = () => {
     </motion.div>
   );
 };
+
 const Hero = () => {
   return (
     <section className="flex h-screen max-h-[1100px] w-full items-center justify-center bg-[#000000] py-44">
