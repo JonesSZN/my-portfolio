@@ -1,5 +1,6 @@
 import { Container } from "../components/container";
 import { AlignLeft } from "lucide-react";
+import { motion } from "framer-motion";
 
 const UL = () => {
   const LIST = ["Demos", "About Me", "Work", "Blog", "All Pages"];
@@ -21,7 +22,21 @@ const UL = () => {
 
 const Header = ({ bg }) => {
   return (
-    <header className="fixed z-[999] flex w-full justify-center bg-[#000000] py-4">
+    <motion.header
+      initial={{
+        y: "-100vh",
+      }}
+      animate={{
+        y: 0,
+      }}
+      transition={{
+        type: "tween",
+        stiffness: 10,
+        damping: 5,
+        duration: 1.8,
+      }}
+      className="fixed z-[999] flex w-full justify-center bg-[#000000] py-4"
+    >
       <Container>
         <nav className="z-50 flex items-center justify-between">
           <a
@@ -39,7 +54,7 @@ const Header = ({ bg }) => {
           </a>
         </nav>
       </Container>
-    </header>
+    </motion.header>
   );
 };
 
