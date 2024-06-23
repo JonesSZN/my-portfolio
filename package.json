@@ -1,6 +1,5 @@
 {
   "name": "my-portfolio",
-  "homepage": "https://JonesSZN.github.io/my-portfolio",
   "version": "0.1.0",
   "private": true,
   "prettier": {
@@ -13,6 +12,7 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "clsx": "^2.1.1",
+    "framer-motion": "^11.2.11",
     "lucide-react": "^0.395.0",
     "prettier": "^3.3.2",
     "prettier-plugin-tailwindcss": "^0.6.5",
