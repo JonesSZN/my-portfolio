@@ -1,15 +1,6 @@
 import { Container } from "../components/container";
 import { ChevronRight } from "lucide-react";
-
-const Heading = () => {
-  return (
-    <div className="w-full">
-      <h1 className="max-w-[400px] text-4xl text-[#11181C] lg:text-5xl">
-        A limited showcase of my projects
-      </h1>
-    </div>
-  );
-};
+import { useState } from "react";
 
 const Cards = () => {
   const CARDS_OBJ = [
@@ -83,8 +74,12 @@ const Cards = () => {
 };
 
 const Button = () => {
+  const [isOpen, setIsOpen] = useState(false);
   return (
-    <button className="group flex items-center gap-2 rounded-md border border-[#003cd6] border-[] bg-[#003cd6] px-[18px] py-2 text-[14px] font-bold text-white transition-all duration-300 hover:border hover:bg-white hover:text-[#003cd6]">
+    <button
+      onClick={() => setIsOpen(!isOpen)}
+      className="group flex items-center gap-2 rounded-md border border-[#003cd6] border-[] bg-[#003cd6] px-[18px] py-2 text-[14px] font-bold text-white transition-all duration-300 hover:border hover:bg-white hover:text-[#003cd6]"
+    >
       More Projects
       <ChevronRight className="text-white transition-all duration-300 group-hover:text-[#003cd6]" />
     </button>
@@ -92,6 +87,16 @@ const Button = () => {
 };
 
 const Showcase = () => {
+  const Heading = () => {
+    return (
+      <div className="w-full">
+        <h1 className="max-w-[400px] text-4xl text-[#11181C] lg:text-5xl">
+          A limited showcase of my projects
+        </h1>
+      </div>
+    );
+  };
+
   return (
     <section className="flex w-full justify-center bg-white py-40">
       <Container>

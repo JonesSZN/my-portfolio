@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 const Content = () => {
   return (
-    <div className="flex">
+    <div className="">
       <LeftContent />
     </div>
   );
@@ -23,7 +23,7 @@ const LeftContent = () => {
         type: "tween",
         stiffness: 20,
         damping: 20,
-        duration: 1.5,
+        duration: 1,
       }}
       className="flex flex-col items-center justify-center lg:items-start"
     >

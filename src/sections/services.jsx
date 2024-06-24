@@ -3,7 +3,7 @@ import { Container } from "../components/container";
 const Services = () => {
   const Left = () => {
     return (
-      <div className="group mb-8 flex h-[54px] w-[179px] items-center justify-center rounded-md bg-[#202C3380] px-[3px] py-[7px] text-[20px] text-white lg:px-[4px] lg:py-0">
+      <div className="group mb-8 flex w-auto items-center justify-center self-start rounded-md bg-[#202C3380] px-[3px] py-[7px] text-[20px] text-white lg:px-[4px] lg:py-0 lg:text-[18px] 2xl:text-[20px]">
         <h1 class="relative overflow-hidden">
           <span class="absolute inset-x-0 bottom-0 h-1 origin-left scale-x-0 bg-white transition-transform duration-200 ease-in-out group-hover:scale-x-100"></span>
           I can help you with
@@ -53,7 +53,7 @@ const Services = () => {
   return (
     <section className="flex w-full justify-center bg-[#11181C] py-24">
       <Container>
-        <div className="flex flex-col lg:flex-row lg:gap-96">
+        <div className="flex flex-col lg:gap-96 2xl:flex-row">
           <Left />
           <Right />
         </div>
