@@ -1,6 +1,7 @@
 import { Container } from "../components/container";
 import { cn } from "../lib/tw-merge";
 import { ArrowDownRight } from "lucide-react";
+import { motion } from "framer-motion";
 
 const AchievementCard = ({ card, className, index }) => {
   return (
@@ -81,7 +82,23 @@ const Achievements = () => {
   return (
     <section className="flex w-full justify-center bg-[#11181C] py-24">
       <Container>
-        <div className="grid gap-8 lg:grid-cols-3">
+        <motion.div
+          initial={{
+            opacity: 0,
+          }}
+          whileInView={{
+            opacity: 1,
+          }}
+          viewport={{
+            margin: "-250px",
+            once: true,
+          }}
+          transition={{
+            type: "tween",
+            duration: 2,
+          }}
+          className="grid gap-8 lg:grid-cols-3"
+        >
           {GRID_OBJ.map((card, index) =>
             index === 1 ? (
               <AchievementCard
@@ -93,7 +110,7 @@ const Achievements = () => {
               <AchievementCard card={card} index={index} />
             ),
           )}
-        </div>
+        </motion.div>
       </Container>
     </section>
   );

@@ -1,6 +1,7 @@
 import { Container } from "../components/container";
 import { useState } from "react";
 import { Plus, Minus } from "lucide-react";
+import { motion } from "framer-motion";
 
 const Dropdown = ({ text }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -68,11 +69,27 @@ const Questions = () => {
   ];
 
   return (
-    <div className="flex w-full flex-col gap-8 lg:w-[85%]">
+    <motion.div
+      initial={{
+        opacity: 0,
+      }}
+      whileInView={{
+        opacity: 1,
+      }}
+      viewport={{
+        margin: "-250px",
+        once: true,
+      }}
+      transition={{
+        type: "tween",
+        duration: 2,
+      }}
+      className="flex w-full flex-col gap-8 lg:w-[85%]"
+    >
       {QUESTIONS.map((text) => (
         <Dropdown text={text} />
       ))}
-    </div>
+    </motion.div>
   );
 };
 
@@ -80,9 +97,25 @@ const Faq = () => {
   return (
     <section className="flex w-full justify-center bg-[#FFFFFF] py-24">
       <Container className={"flex flex-col items-center justify-center gap-6"}>
-        <h2 className="text-4xl font-semibold text-[11181C] lg:text-center lg:text-5xl">
+        <motion.h2
+          initial={{
+            opacity: 0,
+          }}
+          whileInView={{
+            opacity: 1,
+          }}
+          viewport={{
+            margin: "-90px",
+            once: true,
+          }}
+          transition={{
+            type: "tween",
+            duration: 2,
+          }}
+          className="text-4xl font-semibold text-[11181C] lg:text-center lg:text-5xl"
+        >
           Frequently asked questions
-        </h2>
+        </motion.h2>
         <Questions />
       </Container>
     </section>

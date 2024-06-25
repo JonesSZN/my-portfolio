@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 
 const UL = () => {
+  const [isOpen, setIsOpen] = useState(false);
   const LIST = ["Demos", "About Me", "Work", "Blog", "All Pages"];
   return (
     <>

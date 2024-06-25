@@ -1,6 +1,7 @@
 import { Container } from "../components/container";
 import { ChevronRight } from "lucide-react";
 import { useState } from "react";
+import { motion } from "framer-motion";
 
 const Cards = () => {
   const CARDS_OBJ = [
@@ -35,7 +36,23 @@ const Cards = () => {
   ];
 
   return (
-    <div className="mb-12 grid gap-16 lg:grid-cols-2">
+    <motion.div
+      initial={{
+        opacity: 0,
+      }}
+      whileInView={{
+        opacity: 1,
+      }}
+      viewport={{
+        margin: "-380px",
+        once: true,
+      }}
+      transition={{
+        type: "tween",
+        duration: 2,
+      }}
+      className="mb-12 grid grid-cols-1 gap-16 lg:grid-cols-2"
+    >
       {CARDS_OBJ.map((card) => (
         <div className="group relative h-[599px] w-[360px] overflow-hidden rounded-2xl bg-[#ECEDEE] pl-8 pt-8 lg:h-[738px] lg:w-full lg:pl-12 lg:pt-12">
           <div className="flex h-full w-full flex-col justify-between">
@@ -69,7 +86,7 @@ const Cards = () => {
           </div>
         </div>
       ))}
-    </div>
+    </motion.div>
   );
 };
 
@@ -89,11 +106,27 @@ const Button = () => {
 const Showcase = () => {
   const Heading = () => {
     return (
-      <div className="w-full">
+      <motion.div
+        initial={{
+          opacity: 0,
+        }}
+        whileInView={{
+          opacity: 1,
+        }}
+        viewport={{
+          margin: "-250px",
+          once: true,
+        }}
+        transition={{
+          type: "tween",
+          duration: 2,
+        }}
+        className="w-full"
+      >
         <h1 className="max-w-[400px] text-4xl text-[#11181C] lg:text-5xl">
           A limited showcase of my projects
         </h1>
-      </div>
+      </motion.div>
     );
   };
 

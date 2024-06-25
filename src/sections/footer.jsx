@@ -1,4 +1,5 @@
 import { Container } from "../components/container";
+import { motion } from "framer-motion";
 
 const TopFooter = () => {
   return (
@@ -69,10 +70,26 @@ const Footer = () => {
   return (
     <section className="flex w-full justify-center bg-white py-8">
       <Container>
-        <footer className="flex flex-col gap-8 lg:gap-12">
+        <motion.footer
+          initial={{
+            opacity: 0,
+          }}
+          whileInView={{
+            opacity: 1,
+          }}
+          viewport={{
+            margin: "-100px",
+            once: true,
+          }}
+          transition={{
+            type: "tween",
+            duration: 2,
+          }}
+          className="flex flex-col gap-8 lg:gap-12"
+        >
           <TopFooter />
           <BottomFooter />
-        </footer>
+        </motion.footer>
       </Container>
     </section>
   );

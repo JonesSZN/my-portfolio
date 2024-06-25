@@ -35,11 +35,11 @@ const LeftContent = () => {
       </div>
 
       <p className="mb-8 max-w-[300px] text-center text-5xl text-white lg:max-w-[600px] lg:text-left lg:text-6xl">
-        Outstanding websites crafted with Webflow
+        Outstanding websites crafted with React
       </p>
       <p className="mb-12 max-w-[550px] text-center text-[20px] text-[#687076] lg:text-left">
-        Webflow development tailored for design-focused companies, emphasizing
-        meticulous attention to detail and unwavering passion.
+        I harness the power of HTML, CSS, TailwindCSS, and React to bring your
+        digital vision to life.
       </p>
       <Button text={"Request a Project"} />
     </motion.div>
