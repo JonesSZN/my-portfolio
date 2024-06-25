@@ -36,23 +36,7 @@ const Cards = () => {
   ];
 
   return (
-    <motion.div
-      initial={{
-        opacity: 0,
-      }}
-      whileInView={{
-        opacity: 1,
-      }}
-      viewport={{
-        margin: "-380px",
-        once: true,
-      }}
-      transition={{
-        type: "tween",
-        duration: 2,
-      }}
-      className="mb-12 grid grid-cols-1 gap-16 lg:grid-cols-2"
-    >
+    <div className="mb-12 grid grid-cols-1 gap-16 lg:grid-cols-2">
       {CARDS_OBJ.map((card) => (
         <div className="group relative h-[599px] w-[360px] overflow-hidden rounded-2xl bg-[#ECEDEE] pl-8 pt-8 lg:h-[738px] lg:w-full lg:pl-12 lg:pt-12">
           <div className="flex h-full w-full flex-col justify-between">
@@ -86,7 +70,7 @@ const Cards = () => {
           </div>
         </div>
       ))}
-    </motion.div>
+    </div>
   );
 };
 
@@ -114,7 +98,7 @@ const Showcase = () => {
           opacity: 1,
         }}
         viewport={{
-          margin: "-250px",
+          margin: "-180px",
           once: true,
         }}
         transition={{

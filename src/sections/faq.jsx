@@ -69,27 +69,11 @@ const Questions = () => {
   ];
 
   return (
-    <motion.div
-      initial={{
-        opacity: 0,
-      }}
-      whileInView={{
-        opacity: 1,
-      }}
-      viewport={{
-        margin: "-250px",
-        once: true,
-      }}
-      transition={{
-        type: "tween",
-        duration: 2,
-      }}
-      className="flex w-full flex-col gap-8 lg:w-[85%]"
-    >
+    <div className="flex w-full flex-col gap-8 lg:w-[85%]">
       {QUESTIONS.map((text) => (
         <Dropdown text={text} />
       ))}
-    </motion.div>
+    </div>
   );
 };
 
@@ -97,25 +81,9 @@ const Faq = () => {
   return (
     <section className="flex w-full justify-center bg-[#FFFFFF] py-24">
       <Container className={"flex flex-col items-center justify-center gap-6"}>
-        <motion.h2
-          initial={{
-            opacity: 0,
-          }}
-          whileInView={{
-            opacity: 1,
-          }}
-          viewport={{
-            margin: "-90px",
-            once: true,
-          }}
-          transition={{
-            type: "tween",
-            duration: 2,
-          }}
-          className="text-4xl font-semibold text-[11181C] lg:text-center lg:text-5xl"
-        >
+        <h2 className="text-4xl font-semibold text-[11181C] lg:text-center lg:text-5xl">
           Frequently asked questions
-        </motion.h2>
+        </h2>
         <Questions />
       </Container>
     </section>

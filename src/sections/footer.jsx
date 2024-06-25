@@ -70,26 +70,10 @@ const Footer = () => {
   return (
     <section className="flex w-full justify-center bg-white py-8">
       <Container>
-        <motion.footer
-          initial={{
-            opacity: 0,
-          }}
-          whileInView={{
-            opacity: 1,
-          }}
-          viewport={{
-            margin: "-100px",
-            once: true,
-          }}
-          transition={{
-            type: "tween",
-            duration: 2,
-          }}
-          className="flex flex-col gap-8 lg:gap-12"
-        >
+        <footer className="flex flex-col gap-8 lg:gap-12">
           <TopFooter />
           <BottomFooter />
-        </motion.footer>
+        </footer>
       </Container>
     </section>
   );

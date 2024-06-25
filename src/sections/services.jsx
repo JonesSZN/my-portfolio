@@ -4,28 +4,12 @@ import { motion } from "framer-motion";
 const Services = () => {
   const Left = () => {
     return (
-      <motion.div
-        initial={{
-          opacity: 0,
-        }}
-        whileInView={{
-          opacity: 1,
-        }}
-        viewport={{
-          margin: "-120px",
-          once: true,
-        }}
-        transition={{
-          type: "tween",
-          duration: 2,
-        }}
-        className="group mb-8 flex w-auto items-center justify-center self-start rounded-md bg-[#202C3380] px-[3px] py-[7px] text-[20px] text-white lg:px-[4px] lg:py-0 lg:text-[18px] 2xl:text-[20px]"
-      >
+      <div className="group mb-8 flex w-auto items-center justify-center self-start rounded-md bg-[#202C3380] px-[3px] py-[7px] text-[20px] text-white lg:px-[4px] lg:py-0 lg:text-[18px] 2xl:text-[20px]">
         <h1 class="relative overflow-hidden">
           <span class="absolute inset-x-0 bottom-0 h-1 origin-left scale-x-0 bg-white transition-transform duration-200 ease-in-out group-hover:scale-x-100"></span>
           I can help you with
         </h1>
-      </motion.div>
+      </div>
     );
   };
   const Right = () => {
@@ -50,23 +34,7 @@ const Services = () => {
       },
     ];
     return (
-      <motion.div
-        initial={{
-          opacity: 0,
-        }}
-        whileInView={{
-          opacity: 1,
-        }}
-        viewport={{
-          margin: "-350px",
-          once: true,
-        }}
-        transition={{
-          type: "tween",
-          duration: 2,
-        }}
-        className="flex flex-col gap-12"
-      >
+      <div className="flex flex-col gap-12">
         {CARD_OBJ.map((card) => (
           <div className="flex gap-4">
             <p className="mt-2 text-[18px] text-white lg:mt-6">{card.number}</p>
@@ -80,7 +48,7 @@ const Services = () => {
             </div>
           </div>
         ))}
-      </motion.div>
+      </div>
     );
   };
   return (
