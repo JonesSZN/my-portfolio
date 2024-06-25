@@ -90,27 +90,11 @@ const Button = () => {
 const Showcase = () => {
   const Heading = () => {
     return (
-      <motion.div
-        initial={{
-          opacity: 0,
-        }}
-        whileInView={{
-          opacity: 1,
-        }}
-        viewport={{
-          margin: "-180px",
-          once: true,
-        }}
-        transition={{
-          type: "tween",
-          duration: 2,
-        }}
-        className="w-full"
-      >
+      <div className="w-full">
         <h1 className="max-w-[400px] text-4xl text-[#11181C] lg:text-5xl">
           A limited showcase of my projects
         </h1>
-      </motion.div>
+      </div>
     );
   };
 

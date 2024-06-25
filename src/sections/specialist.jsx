@@ -6,23 +6,7 @@ const Specialist = () => {
   return (
     <section className="relative flex w-full justify-center bg-[#11181C] py-28">
       <Container className={"flex justify-center"}>
-        <motion.div
-          initial={{
-            opacity: 0,
-          }}
-          whileInView={{
-            opacity: 1,
-          }}
-          viewport={{
-            margin: "-240px",
-            once: true,
-          }}
-          transition={{
-            type: "tween",
-            duration: 2,
-          }}
-          className="z-50 flex flex-col items-center"
-        >
+        <div className="z-50 flex flex-col items-center">
           <img
             className="absolute top-0 z-0 w-[650px]"
             src="images/colors-image.png"
@@ -36,7 +20,7 @@ const Specialist = () => {
             inspire my coding journey.”
           </p>
           <Button text={"About Me"} />
-        </motion.div>
+        </div>
       </Container>
     </section>
   );

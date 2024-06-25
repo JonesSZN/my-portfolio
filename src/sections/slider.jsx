@@ -5,23 +5,7 @@ const Slider = () => {
   return (
     <section className="flex w-full justify-center bg-[#FFFFFF] py-24">
       <Container>
-        <motion.div
-          initial={{
-            opacity: 0,
-          }}
-          whileInView={{
-            opacity: 1,
-          }}
-          viewport={{
-            margin: "-250px",
-            once: true,
-          }}
-          transition={{
-            type: "tween",
-            duration: 2,
-          }}
-          className="flex gap-8 overflow-hidden"
-        >
+        <div className="flex gap-8 overflow-hidden">
           <p className="whitespace-nowrap text-[20px] text-[#11181C]">
             Trusted by
           </p>
@@ -51,7 +35,7 @@ const Slider = () => {
               <img src="images/slider-five.svg" alt="" />
             </div>
           </div>
-        </motion.div>
+        </div>
       </Container>
     </section>
   );
