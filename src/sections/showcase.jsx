@@ -36,7 +36,7 @@ const Cards = () => {
   ];
 
   return (
-    <div className="mb-12 grid grid-cols-1 gap-16 lg:grid-cols-2">
+    <div className="mb-12 grid grid-cols-1 gap-16 md:grid-cols-2 xl:grid-cols-2">
       {CARDS_OBJ.map((card) => (
         <div className="group relative h-[599px] w-[360px] overflow-hidden rounded-2xl bg-[#ECEDEE] pl-8 pt-8 lg:h-[738px] lg:w-full lg:pl-12 lg:pt-12">
           <div className="flex h-full w-full flex-col justify-between">

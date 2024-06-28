@@ -54,7 +54,7 @@ const Services = () => {
   return (
     <section className="flex w-full justify-center bg-[#11181C] py-24">
       <Container>
-        <div className="flex flex-col lg:gap-96 2xl:flex-row">
+        <div className="flex flex-col md:flex-row lg:gap-96 xl:flex-row">
           <Left />
           <Right />
         </div>
