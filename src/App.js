@@ -13,7 +13,7 @@ import {
 
 function App() {
   return (
-    <main className="flex flex-col items-center">
+    <main className="relative flex flex-col items-center">
       <Header />
       <Hero />
       <Slider />

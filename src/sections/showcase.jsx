@@ -1,16 +1,15 @@
 import { Container } from "../components/container";
 import { ChevronRight } from "lucide-react";
 import { useState } from "react";
-import { motion } from "framer-motion";
 
 const Cards = () => {
   const CARDS_OBJ = [
     {
-      image: "images/hrflow-logo.webp",
+      image: "images/careplus-logo.svg",
       Heading:
         "We seamlessly blend cutting-edge technology, global connectivity, and unmatched expertise to redefine how businesses approach their supply chain challenges.",
-      siteimage: "images/hrflow-bg.png",
-      link: "https://jonesszn.github.io/hr-flow/",
+      siteimage: "images/care-site-bg.png",
+      link: "https://jonesszn.github.io/careplus-site/",
     },
     {
       image: "images/mediflow-logo.svg",
@@ -37,7 +36,7 @@ const Cards = () => {
 
   return (
     <div className="mb-12 grid grid-cols-1 gap-16 md:grid-cols-2 xl:grid-cols-2">
-      {CARDS_OBJ.map((card) => (
+      {CARDS_OBJ.slice(CARDS_OBJ).map((card) => (
         <div className="group relative h-[599px] w-[360px] overflow-hidden rounded-2xl bg-[#ECEDEE] pl-8 pt-8 lg:h-[738px] lg:w-full lg:pl-12 lg:pt-12">
           <div className="flex h-full w-full flex-col justify-between">
             <div>
@@ -75,12 +74,8 @@ const Cards = () => {
 };
 
 const Button = () => {
-  const [isOpen, setIsOpen] = useState(false);
   return (
-    <button
-      onClick={() => setIsOpen(!isOpen)}
-      className="group flex items-center gap-2 rounded-md border border-[#003cd6] border-[] bg-[#003cd6] px-[18px] py-2 text-[14px] font-bold text-white transition-all duration-300 hover:border hover:bg-white hover:text-[#003cd6]"
-    >
+    <button className="group flex items-center gap-2 rounded-md border border-[#003cd6] border-[] bg-[#003cd6] px-[18px] py-2 text-[14px] font-bold text-white transition-all duration-300 hover:border hover:bg-white hover:text-[#003cd6]">
       More Projects
       <ChevronRight className="text-white transition-all duration-300 group-hover:text-[#003cd6]" />
     </button>
