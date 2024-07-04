@@ -26,7 +26,7 @@ const Dropdown = ({ text }) => {
       {/* plus/minus div */}
       <div
         onClick={() => setIsOpen(!isOpen)}
-        className="absolute right-0 top-12 size-9"
+        className="absolute right-0 top-6 size-9"
       >
         {/* plus and minus need to be absolute so they can be in the center while being in the same spot. */}
 
