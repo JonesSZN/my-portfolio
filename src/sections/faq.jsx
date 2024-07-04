@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 const Dropdown = ({ text }) => {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <div className="flex items-center justify-between border-b border-neutral-500/40 py-6">
+    <div className="relative flex items-center justify-between border-b border-neutral-500/40 py-6">
       <div className="flex flex-col gap-4">
         <p
           onClick={() => setIsOpen(!isOpen)}
@@ -22,7 +22,14 @@ const Dropdown = ({ text }) => {
           {text.description}
         </p>
       </div>
-      <div onClick={() => setIsOpen(!isOpen)} className="relative">
+
+      {/* plus/minus div */}
+      <div
+        onClick={() => setIsOpen(!isOpen)}
+        className="absolute right-0 top-12 size-9"
+      >
+        {/* plus and minus need to be absolute so they can be in the center while being in the same spot. */}
+
         <Plus
           className={`absolute left-1/2 top-1/2 shrink-0 -translate-x-1/2 -translate-y-1/2 cursor-pointer transition-all duration-300 ${isOpen ? "opacity-0" : "opacity-100"}`}
         />
