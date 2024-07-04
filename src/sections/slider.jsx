@@ -2,6 +2,18 @@ import { Container } from "../components/container";
 import { motion } from "framer-motion";
 
 const Slider = () => {
+  const IMAGE_DATA = [
+    "images/slider-one.svg",
+    "images/slider-two.svg",
+    "images/slider-three.svg",
+    "images/slider-four.svg",
+    "images/slider-five.svg",
+    "images/slider-one.svg",
+    "images/slider-two.svg",
+    "images/slider-three.svg",
+    "images/slider-four.svg",
+    "images/slider-five.svg",
+  ];
   return (
     <section className="flex w-full justify-center bg-[#FFFFFF] py-24">
       <Container>
@@ -10,29 +22,18 @@ const Slider = () => {
             Trusted by
           </p>
           <div className="flex shrink-0 overflow-hidden">
+            {/* slider-1 */}
             <div className="logos-slide flex w-full">
-              <img src="images/slider-one.svg" alt="" />
-              <img src="images/slider-two.svg" alt="" />
-              <img src="images/slider-three.svg" alt="" />
-              <img src="images/slider-four.svg" alt="" />
-              <img src="images/slider-five.svg" alt="" />
-              <img src="images/slider-one.svg" alt="" />
-              <img src="images/slider-two.svg" alt="" />
-              <img src="images/slider-three.svg" alt="" />
-              <img src="images/slider-four.svg" alt="" />
-              <img src="images/slider-five.svg" alt="" />
+              {IMAGE_DATA.map((image) => (
+                <img src={image} alt="" />
+              ))}
             </div>
+
+            {/* slider-2 */}
             <div className="logos-slide flex w-full">
-              <img src="images/slider-one.svg" alt="" />
-              <img src="images/slider-two.svg" alt="" />
-              <img src="images/slider-three.svg" alt="" />
-              <img src="images/slider-four.svg" alt="" />
-              <img src="images/slider-five.svg" alt="" />
-              <img src="images/slider-one.svg" alt="" />
-              <img src="images/slider-two.svg" alt="" />
-              <img src="images/slider-three.svg" alt="" />
-              <img src="images/slider-four.svg" alt="" />
-              <img src="images/slider-five.svg" alt="" />
+              {IMAGE_DATA.map((image) => (
+                <img src={image} alt="" />
+              ))}
             </div>
           </div>
         </div>
