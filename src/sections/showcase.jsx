@@ -36,20 +36,22 @@ const Grid = () => {
 
   return (
     <div className="mb-12 grid grid-cols-1 gap-16 md:grid-cols-2 xl:grid-cols-2">
-      {CARDS_OBJ.slice(CARDS_OBJ).map((card) => (
-        <GridCard card={card} />
+      {CARDS_OBJ.slice(CARDS_OBJ).map((card, index) => (
+        <GridCard card={card} index={index} />
       ))}
     </div>
   );
 };
 
-const GridCard = ({ card }) => {
+const GridCard = ({ card, index }) => {
   return (
     <div className="group relative h-[599px] w-[360px] overflow-hidden rounded-2xl bg-[#ECEDEE] pl-8 pt-8 lg:h-[738px] lg:w-full lg:pl-12 lg:pt-12">
       <div className="flex h-full w-full flex-col justify-between">
         <div>
           <img
-            className="mb-4 h-[50px] w-[160px] object-contain"
+            className={`mb-4 h-[50px] w-[160px] object-contain ${
+              index === 2 ? "brightness-200" : ""
+            }`}
             src={card.image}
             alt=""
           />
