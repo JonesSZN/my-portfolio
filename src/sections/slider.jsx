@@ -15,7 +15,7 @@ const Slider = () => {
     "images/slider-five.svg",
   ];
   return (
-    <section className="flex w-full justify-center bg-[#FFFFFF] py-24">
+    <section className="flex w-full justify-center bg-[#FFFFFF] pt-24 xl:py-24">
       <Container>
         <div className="flex gap-8 overflow-hidden">
           <p className="whitespace-nowrap text-[20px] text-[#11181C]">
