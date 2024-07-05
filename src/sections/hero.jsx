@@ -52,7 +52,7 @@ const Hero = () => {
   return (
     <section className="relative flex h-screen max-h-[1100px] w-full items-center justify-center overflow-hidden bg-[#000000] py-44">
       <div
-        className={`absolute flex h-screen w-full items-center justify-center bg-red-500 bg-cover bg-fixed bg-center ${
+        className={`absolute flex h-screen w-full items-center justify-center bg-red-500 bg-cover bg-center xl:bg-fixed ${
           bg
             ? "opacity-30 transition-all duration-300"
             : "opacity-0 transition-all duration-300"
