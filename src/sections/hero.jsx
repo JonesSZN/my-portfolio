@@ -5,7 +5,7 @@ import { useState } from "react";
 
 const Content = () => {
   return (
-    <div className="">
+    <div className="mt-28 xl:mt-0">
       <LeftContent />
     </div>
   );
@@ -77,7 +77,7 @@ const Hero = () => {
         onClick={() => setBg(!bg)}
         className=""
         type="button"
-        class="absolute right-2 top-24 mb-2 me-2 cursor-pointer rounded-lg bg-gradient-to-r from-cyan-400 via-cyan-500 to-cyan-600 px-1 py-2 text-center text-sm font-medium text-white shadow-xl shadow-cyan-500/50 hover:bg-gradient-to-br focus:outline-none xl:right-8 xl:top-32 xl:p-3 xl:px-5 xl:py-2.5 dark:shadow-lg dark:shadow-cyan-800/80 dark:focus:ring-cyan-800"
+        class="absolute right-1 top-24 cursor-pointer rounded-lg bg-gradient-to-r from-cyan-400 via-cyan-500 to-cyan-600 px-1 py-2 text-center text-sm font-medium text-white shadow-xl shadow-cyan-500/50 hover:bg-gradient-to-br focus:outline-none xl:right-8 xl:top-32 xl:p-3 xl:px-5 xl:py-2.5 dark:shadow-lg dark:shadow-cyan-800/80 dark:focus:ring-cyan-800"
       >
         Background
       </motion.button>
