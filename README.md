@@ -17,7 +17,8 @@ This project is a single homepage site built with React and styled using Tailwin
 - useState
 
 
-![image](https://github.com/JonesSZN/my-portfolio/assets/110791038/29625721-437b-47d3-9ea7-4b15601ecd09)
+![portfolio-image](https://github.com/JonesSZN/my-portfolio/assets/110791038/bc1cec5b-f0b9-4832-8bf6-d7a362f4ab6c)
+
 
 
 
