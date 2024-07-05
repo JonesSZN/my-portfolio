@@ -51,15 +51,14 @@ const Hero = () => {
   const [bg, setBg] = useState(false);
   return (
     <section className="relative flex h-screen max-h-[1100px] w-full items-center justify-center overflow-hidden bg-[#000000] py-44">
-      <img
-        className={`absolute h-screen w-full bg-cover bg-center bg-no-repeat ${
+      <div
+        className={`absolute flex h-screen w-full items-center justify-center bg-red-500 bg-cover bg-fixed bg-center ${
           bg
             ? "opacity-30 transition-all duration-300"
             : "opacity-0 transition-all duration-300"
-        }`}
-        src="images/wrapper-image-2.jpg"
-        alt=""
-      />
+        } }`}
+        style={{ backgroundImage: "url('images/wrapper-image-2.jpg')" }}
+      ></div>
 
       <motion.button
         initial={{
