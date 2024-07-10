@@ -10,6 +10,7 @@ import {
   Work,
   Footer,
 } from "./sections";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
   return (

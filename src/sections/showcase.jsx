@@ -2,41 +2,77 @@ import { Container } from "../components/container";
 import { ChevronRight } from "lucide-react";
 import { useState } from "react";
 
-const Grid = () => {
-  const CARDS_OBJ = [
-    {
-      image: "images/careplus-logo.svg",
-      Heading:
-        "We seamlessly blend cutting-edge technology, global connectivity, and unmatched expertise to redefine how businesses approach their supply chain challenges.",
-      siteimage: "images/care-site-bg.png",
-      link: "https://jonesszn.github.io/careplus-site/",
-    },
-    {
-      image: "images/mediflow-logo.svg",
-      Heading:
-        "We understand the importance of protecting what matters most to you. With our comprehensive insurance solutions, we aim to provide you with the peace of mind you deserve.",
-      siteimage: "images/mediflow-bg.png",
-      link: "https://jonesszn.github.io/mediflow/",
-    },
-    {
-      image: "images/smarter-logo.svg",
-      Heading:
-        "Slope is a cutting-edge fintech company at the forefront of financial innovation. We provide innovative solutions and services that empower individuals and businesses.",
-      siteimage: "images/smarter-bg.png",
-      link: "https://jonesszn.github.io/smarter-site/",
-    },
-    {
-      image: "images/origin-logo.svg",
-      Heading:
-        "Natural and organic wood products that will perfectly suit your interior.",
-      siteimage: "images/origin-bg.png",
-      link: "https://jonesszn.github.io/origin-site/",
-    },
-  ];
+const CARDS_OBJ = [
+  {
+    image: "images/careplus-logo.svg",
+    Heading:
+      "We seamlessly blend cutting-edge technology, global connectivity, and unmatched expertise to redefine how businesses approach their supply chain challenges.",
+    siteimage: "images/care-site-bg.png",
+    link: "https://jonesszn.github.io/careplus-site/",
+  },
+  {
+    image: "images/mediflow-logo.svg",
+    Heading:
+      "We understand the importance of protecting what matters most to you. With our comprehensive insurance solutions, we aim to provide you with the peace of mind you deserve.",
+    siteimage: "images/mediflow-bg.png",
+    link: "https://jonesszn.github.io/mediflow/",
+  },
+  {
+    image: "images/smarter-logo.svg",
+    Heading:
+      "Slope is a cutting-edge fintech company at the forefront of financial innovation. We provide innovative solutions and services that empower individuals and businesses.",
+    siteimage: "images/smarter-bg.png",
+    link: "https://jonesszn.github.io/smarter-site/",
+  },
+  {
+    image: "images/origin-logo.svg",
+    Heading:
+      "Natural and organic wood products that will perfectly suit your interior.",
+    siteimage: "images/origin-bg.png",
+    link: "https://jonesszn.github.io/origin-site/",
+  },
+  {
+    image: "images/specialist-logo.png",
+    Heading:
+      "We seamlessly blend cutting-edge technology, global connectivity, and unmatched expertise to redefine how businesses approach their supply chain challenges.",
+    siteimage: "images/specialist-site-bg.png",
+    link: "https://jonesszn.github.io/specialist-site/",
+  },
+  {
+    image: "images/hrsite-logo.webp",
+    Heading:
+      "We understand the importance of protecting what matters most to you. With our comprehensive insurance solutions, we aim to provide you with the peace of mind you deserve.",
+    siteimage: "images/hrflow-site-bg.png",
+    link: "https://jonesszn.github.io/hr-flow/",
+  },
+  {
+    image: "images/oraxol-logo.png",
+    Heading:
+      "We understand the importance of protecting what matters most to you. With our comprehensive insurance solutions, we aim to provide you with the peace of mind you deserve.",
+    siteimage: "images/oxaxol-site-bg.png",
+    link: "https://jonesszn.github.io/oraxol-proj/",
+  },
+  {
+    image: "images/zeepho-logo.png",
+    Heading:
+      "We understand the importance of protecting what matters most to you. With our comprehensive insurance solutions, we aim to provide you with the peace of mind you deserve.",
+    siteimage: "images/zeepho-site-bg.png",
+    link: "https://jonesszn.github.io/zeepho-site/",
+  },
 
+  {
+    image: "images/zona-logo.svg",
+    Heading:
+      "We seamlessly blend cutting-edge technology, global connectivity, and unmatched expertise to redefine how businesses approach their supply chain challenges.",
+    siteimage: "images/zona-site-bg.png",
+    link: "https://jonesszn.github.io/zona-proj/",
+  },
+];
+
+const Grid = ({ projectsToRender }) => {
   return (
     <div className="mb-12 grid grid-cols-1 gap-16 md:grid-cols-2 xl:grid-cols-2">
-      {CARDS_OBJ.slice(CARDS_OBJ).map((card, index) => (
+      {CARDS_OBJ.slice(0, projectsToRender).map((card, index) => (
         <GridCard card={card} index={index} />
       ))}
     </div>
@@ -82,6 +118,7 @@ const GridCard = ({ card, index }) => {
 };
 
 const Showcase = () => {
+  const [projectsToRender, setProjectsToRender] = useState(4);
   const Heading = () => {
     return (
       <div className="w-full">
@@ -97,10 +134,19 @@ const Showcase = () => {
       <Container>
         <div className="flex flex-col items-center gap-6">
           <Heading />
-          <Grid />
+          <Grid projectsToRender={projectsToRender} />
 
           {/* BUTTON AT BOTTOM */}
-          <button className="group flex items-center gap-2 rounded-md border border-[#003cd6] border-[] bg-[#003cd6] px-[18px] py-2 text-[14px] font-bold text-white transition-all duration-300 hover:border hover:bg-white hover:text-[#003cd6]">
+          <button
+            onClick={() => {
+              if (projectsToRender === 4) {
+                setProjectsToRender(CARDS_OBJ.length);
+              } else {
+                setProjectsToRender(4);
+              }
+            }}
+            className="group flex items-center gap-2 rounded-md border border-[#003cd6] border-[] bg-[#003cd6] px-[18px] py-2 text-[14px] font-bold text-white transition-all duration-300 hover:border hover:bg-white hover:text-[#003cd6]"
+          >
             More Projects
             <ChevronRight className="text-white transition-all duration-300 group-hover:text-[#003cd6]" />
           </button>
