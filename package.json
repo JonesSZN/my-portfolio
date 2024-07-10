@@ -1,6 +1,5 @@
 {
   "name": "my-portfolio",
-  "homepage": "https://JonesSZN.github.io/my-portfolio",
   "version": "0.1.0",
   "private": true,
   "prettier": {

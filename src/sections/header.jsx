@@ -5,7 +5,7 @@ import { useState } from "react";
 
 const UL = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const LIST = ["Demos", "About Me", "Work", "Blog", "All Pages"];
+  const LIST = ["Work", "About Me", "Faq"];
   return (
     <>
       <AlignLeft
@@ -54,7 +54,7 @@ const Header = ({ bg }) => {
           <UL />
           <a
             className="hidden text-[16px] font-bold text-white transition-all duration-300 md:block lg:block"
-            href="/"
+            href="mailto:pdjones0416@gmail.com"
           >
             Request a Project
           </a>

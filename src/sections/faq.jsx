@@ -58,21 +58,6 @@ const Questions = () => {
       description:
         "Project timelines depend on the scope and requirements. I work efficiently to deliver quality results, and timelines are discussed during the project consultation.",
     },
-    {
-      heading: "can you work with my existing branding or design guidelines?",
-      description:
-        "Absolutely! I can seamlessly integrate your existing branding and design guidelines to maintain a cohesive and consistent look.",
-    },
-    {
-      heading: "How much does your service cost?",
-      description:
-        "My pricing varies based on project complexity and features. Contact me for a personalized quote tailored to your needs.",
-    },
-    {
-      heading: "Do you offer ongoing maintenance and support?",
-      description:
-        "Yes, I provide ongoing maintenance and support to ensure your website stays optimized and up-to-date.",
-    },
   ];
 
   return (

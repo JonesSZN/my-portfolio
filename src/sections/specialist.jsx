@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 const Specialist = () => {
   return (
-    <section className="relative flex w-full justify-center bg-[#11181C] py-28">
+    <section className="relative flex w-full justify-center bg-[#11181C] pt-28">
       <Container className={"flex justify-center"}>
         <div className="z-50 flex flex-col items-center">
           <img
@@ -19,7 +19,6 @@ const Specialist = () => {
             “Behind the scenes of Exploring the passions and pursuits that
             inspire my coding journey.”
           </p>
-          <Button text={"About Me"} />
         </div>
       </Container>
     </section>

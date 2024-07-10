@@ -39,17 +39,14 @@ const BottomFooter = () => {
         © 2024 Parker Jones. All rights reserved. Licensing
       </p>
       <p className="max-w-[250px] text-center lg:max-w-[600px]">
-        Developed by Parker Jones. Powered by{" "}
-        <span className="cursor-pointer font-bold text-[#3D5F81] underline">
-          <a href="https://www.opencoregroup.com/">OpenCore Group</a>
-        </span>
+        Developed by Parker Jones
       </p>
     </div>
   );
 };
 
 const UL = () => {
-  const UL = ["Home", "About", "Work", "Contact"];
+  const UL = ["Work", "About Me", "Faq"];
   return (
     <ul className="flex gap-6">
       {UL.map((item) => (
