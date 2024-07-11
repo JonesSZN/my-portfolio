@@ -62,9 +62,9 @@ const Hero = () => {
       ></div>
 
       <motion.div
-        className="absolute left-[94px] top-[327px] z-50 xl:left-[390px] xl:top-[393px]"
+        className="absolute right-4 top-[327px] z-50 xl:top-24"
         initial={{
-          x: "-100vw",
+          x: "100vw",
         }}
         animate={{
           x: 0,
@@ -73,7 +73,7 @@ const Hero = () => {
           type: "tween",
           stiffness: 20,
           damping: 20,
-          duration: 1,
+          duration: 2,
         }}
       >
         <Cat onClick={() => setBg(!bg)} className="" color="white"></Cat>
