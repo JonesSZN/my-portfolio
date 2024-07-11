@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 const Work = () => {
   return (
-    <section id="work" className="flex w-full justify-center bg-white py-12">
+    <section className="flex w-full justify-center bg-white py-12">
       <Container>
         <div className="flex rounded-2xl bg-[#083DD5] px-[20px] py-[60px] ring-[10px] ring-neutral-300 lg:p-[100px]">
           <div className="flex flex-col gap-8">

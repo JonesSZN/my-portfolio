@@ -177,7 +177,7 @@ const Showcase = () => {
   const [projectsToRender, setProjectsToRender] = useState(4);
   const Heading = () => {
     return (
-      <div className="w-full">
+      <div id="showcase" className="w-full">
         <h1 className="max-w-[400px] text-4xl text-[#11181C] lg:text-5xl">
           A limited showcase of my projects
         </h1>

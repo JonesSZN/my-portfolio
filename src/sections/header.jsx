@@ -1,51 +1,46 @@
 import { Container } from "../components/container";
-import { AlignLeft } from "lucide-react";
+
 import { motion } from "framer-motion";
-import { useState } from "react";
-import { Link } from "react-scroll";
 
 const UL = () => {
   return (
     <>
       <ul className="flex items-center gap-9">
         <li className="cursor-pointer">
-          <Link
+          <p
+            onClick={() => {
+              const element = document.getElementById("showcase");
+
+              element.scrollIntoView();
+            }}
             className="text-[16px] text-white"
-            activeClass="active"
-            to={"work"}
-            spy={true}
-            smooth={true}
-            offset={50}
-            duration={1000}
           >
             Work
-          </Link>
+          </p>
         </li>
         <li className="cursor-pointer">
-          <Link
+          <p
+            onClick={() => {
+              const element = document.getElementById("achievement");
+
+              element.scrollIntoView();
+            }}
             className="text-[16px] text-white"
-            activeClass="active"
-            to={"achievement"}
-            spy={true}
-            smooth={true}
-            offset={50}
-            duration={1000}
           >
-            About Me
-          </Link>
+            About me
+          </p>
         </li>
         <li className="cursor-pointer">
-          <Link
+          <p
+            onClick={() => {
+              const element = document.getElementById("faq");
+
+              element.scrollIntoView();
+            }}
             className="text-[16px] text-white"
-            activeClass="active"
-            to={"faq"}
-            spy={true}
-            smooth={true}
-            offset={50}
-            duration={1000}
           >
             Faq
-          </Link>
+          </p>
         </li>
       </ul>
     </>
@@ -72,17 +67,14 @@ const Header = () => {
     >
       <Container>
         <nav className="z-50 flex items-center justify-between">
-          <Link
-            activeClass="active"
-            to={"header"}
-            spy={true}
-            smooth={true}
-            offset={50}
-            duration={1000}
+          <p
+            onClick={() => {
+              window.scrollTo(0, 0);
+            }}
             className="cursor-pointer text-[24px] text-white transition-all duration-300"
           >
             Parker Jones
-          </Link>
+          </p>
           <UL />
           <a
             className="hidden text-[16px] font-bold text-white transition-all duration-300 md:block lg:block"
