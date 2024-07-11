@@ -6,7 +6,7 @@ const Dropdown = ({ text }) => {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <div className="relative flex items-center justify-between border-b border-neutral-500/40 py-6">
-      <div className="flex flex-col gap-4">
+      <div className="flex h-fit flex-col gap-4">
         <p
           onClick={() => setIsOpen(!isOpen)}
           className="max-w-[300px] cursor-pointer text-[24px] font-semibold text-[#11181C] lg:max-w-[900px]"

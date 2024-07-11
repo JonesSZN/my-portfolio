@@ -3,23 +3,23 @@ import { motion } from "framer-motion";
 
 const Slider = () => {
   const IMAGE_DATA = [
-    "images/slider-one.svg",
-    "images/slider-two.svg",
-    "images/slider-three.svg",
-    "images/slider-four.svg",
-    "images/slider-five.svg",
-    "images/slider-one.svg",
-    "images/slider-two.svg",
-    "images/slider-three.svg",
-    "images/slider-four.svg",
-    "images/slider-five.svg",
+    "images/html-slider-logo.png",
+    "images/css-slider-logo.png",
+    "images/react-slider-logo.png",
+    "images/tailwind-slider-logo.png",
+    "images/framer-slider-logo.png",
+    "images/js-slider-logo.png",
+    "images/nextjs-slider-logo.png",
+    "images/github-slider-logo.png",
+    "images/node-slider-logo.png",
+    "images/typescript-slider-logo.png",
   ];
   return (
     <section className="flex w-full justify-center bg-[#FFFFFF] pt-24 xl:pt-24">
       <Container>
         <div className="flex gap-8 overflow-hidden">
           <p className="whitespace-nowrap text-[20px] text-[#11181C]">
-            Technologys
+            Technologies
           </p>
           <div className="flex shrink-0 overflow-hidden">
             {/* slider-1 */}

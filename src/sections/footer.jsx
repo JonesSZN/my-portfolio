@@ -46,19 +46,42 @@ const BottomFooter = () => {
 };
 
 const UL = () => {
-  const UL = ["Work", "About Me", "Faq"];
   return (
     <ul className="flex gap-6">
-      {UL.map((item) => (
-        <li className="text-[16px] text-[#687076]">
-          <a
-            className="transition-all duration-300 hover:text-[#033ED9]"
-            href="/"
-          >
-            {item}
-          </a>
-        </li>
-      ))}
+      <li className="flex cursor-pointer gap-6 text-[16px] text-[#687076]">
+        <p
+          onClick={() => {
+            const element = document.getElementById("showcase");
+
+            element.scrollIntoView();
+          }}
+          className="text-[16px] text-[#687076]"
+        >
+          Work
+        </p>
+
+        <p
+          onClick={() => {
+            const element = document.getElementById("achievement");
+
+            element.scrollIntoView();
+          }}
+          className="text-[16px] text-[#687076]"
+        >
+          About Me
+        </p>
+
+        <p
+          onClick={() => {
+            const element = document.getElementById("faq");
+
+            element.scrollIntoView();
+          }}
+          className="text-[16px] text-[#687076]"
+        >
+          Faq
+        </p>
+      </li>
     </ul>
   );
 };
