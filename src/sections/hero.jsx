@@ -2,10 +2,11 @@ import { Container } from "../components/container";
 import { Button } from "../components/button";
 import { motion } from "framer-motion";
 import { useState } from "react";
+import { Cat } from "lucide-react";
 
 const Content = () => {
   return (
-    <div className="mt-28 xl:mt-0">
+    <div className="mt-2 xl:mt-0">
       <LeftContent />
     </div>
   );
@@ -52,7 +53,7 @@ const Hero = () => {
   return (
     <section className="relative flex h-screen max-h-[1100px] w-full items-center justify-center overflow-hidden bg-[#000000] py-44">
       <div
-        className={`absolute flex h-screen w-full items-center justify-center bg-red-500 bg-cover bg-center xl:bg-fixed ${
+        className={`absolute flex h-screen w-full items-center justify-center bg-cover bg-center xl:bg-fixed ${
           bg
             ? "opacity-30 transition-all duration-300"
             : "opacity-0 transition-all duration-300"
@@ -60,9 +61,10 @@ const Hero = () => {
         style={{ backgroundImage: "url('images/wrapper-image-2.jpg')" }}
       ></div>
 
-      <motion.button
+      <motion.div
+        className="absolute left-[94px] top-[327px] z-50 xl:left-[390px] xl:top-[393px]"
         initial={{
-          x: "100vw",
+          x: "-100vw",
         }}
         animate={{
           x: 0,
@@ -71,15 +73,11 @@ const Hero = () => {
           type: "tween",
           stiffness: 20,
           damping: 20,
-          duration: 2.2,
+          duration: 1,
         }}
-        onClick={() => setBg(!bg)}
-        className=""
-        type="button"
-        class="absolute right-4 top-24 rounded border border-gray-400 bg-white px-4 py-2 font-semibold text-gray-800 shadow hover:bg-gray-100"
       >
-        Background
-      </motion.button>
+        <Cat onClick={() => setBg(!bg)} className="" color="white"></Cat>
+      </motion.div>
 
       <Container>
         <Content />
