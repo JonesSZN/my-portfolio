@@ -2,6 +2,7 @@ import { Container } from "../components/container";
 import { ChevronRight } from "lucide-react";
 import { useState } from "react";
 import { ExternalLink } from "lucide-react";
+import { Github } from "lucide-react";
 
 const CARDS_OBJ = [
   {
@@ -120,7 +121,7 @@ const GridCard = ({ card, index }) => {
 
         {/* bottom-div */}
         <div className="">
-          <div className="flex gap-5 xl:gap-16">
+          <div className="flex gap-5 xl:gap-24">
             <button className="group mb-8 flex items-center gap-2 font-bold text-[#003cd6] transition-all duration-200 hover:text-[#11181C]">
               <a
                 className="flex items-center justify-center gap-2 text-[14px] xl:text-[16px]"
@@ -129,7 +130,7 @@ const GridCard = ({ card, index }) => {
                 rel="noopener noreferrer"
               >
                 {" "}
-                View <ExternalLink className="" color="black" />
+                View <ExternalLink color="#003cd6" size={20} />
               </a>
             </button>
 
@@ -141,10 +142,10 @@ const GridCard = ({ card, index }) => {
                 rel="noopener noreferrer"
               >
                 {" "}
-                View Original
+                Original
               </a>
 
-              <ChevronRight className="text-[#003cd6] transition-all duration-200 group-hover:text-[#11181C]" />
+              <ExternalLink color="#11181C" size={20} />
             </button>
 
             <button className="group mb-8 flex items-center gap-2 font-bold text-[#11181C] transition-all duration-200 hover:text-[#003cd6]">
@@ -155,10 +156,10 @@ const GridCard = ({ card, index }) => {
                 rel="noopener noreferrer"
               >
                 {" "}
-                View Code
+                Code
               </a>
 
-              <ChevronRight className="text-[#003cd6] transition-all duration-200 group-hover:text-[#11181C]" />
+              <Github size={20} />
             </button>
           </div>
 
