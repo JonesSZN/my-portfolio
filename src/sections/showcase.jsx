@@ -121,7 +121,7 @@ const GridCard = ({ card, index }) => {
 
         {/* bottom-div */}
         <div className="">
-          <div className="flex gap-5 xl:gap-24">
+          <div className="flex gap-12 xl:gap-24">
             <button className="group mb-8 flex items-center gap-2 font-bold text-[#003cd6] transition-all duration-200 hover:text-[#11181C]">
               <a
                 className="flex items-center justify-center gap-2 text-[14px] xl:text-[16px]"
