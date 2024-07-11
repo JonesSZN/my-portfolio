@@ -2,33 +2,60 @@ import { Container } from "../components/container";
 import { AlignLeft } from "lucide-react";
 import { motion } from "framer-motion";
 import { useState } from "react";
+import { Link } from "react-scroll";
 
 const UL = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const LIST = ["Work", "About Me", "Faq"];
   return (
     <>
-      <AlignLeft
-        color="white"
-        className="z-50 cursor-pointer md:hidden xl:hidden"
-      />
-
-      <ul className="hidden flex-row items-center gap-9 xl:flex">
-        {LIST.map((item) => (
-          <li className="">
-            <a className="text-[16px] text-white" href="/">
-              {item}
-            </a>
-          </li>
-        ))}
+      <ul className="flex items-center gap-9">
+        <li className="cursor-pointer">
+          <Link
+            className="text-[16px] text-white"
+            activeClass="active"
+            to={"work"}
+            spy={true}
+            smooth={true}
+            offset={50}
+            duration={1000}
+          >
+            Work
+          </Link>
+        </li>
+        <li className="cursor-pointer">
+          <Link
+            className="text-[16px] text-white"
+            activeClass="active"
+            to={"achievement"}
+            spy={true}
+            smooth={true}
+            offset={50}
+            duration={1000}
+          >
+            About Me
+          </Link>
+        </li>
+        <li className="cursor-pointer">
+          <Link
+            className="text-[16px] text-white"
+            activeClass="active"
+            to={"faq"}
+            spy={true}
+            smooth={true}
+            offset={50}
+            duration={1000}
+          >
+            Faq
+          </Link>
+        </li>
       </ul>
     </>
   );
 };
 
-const Header = ({ bg }) => {
+const Header = () => {
   return (
     <motion.header
+      id="header"
       initial={{
         y: "-100vh",
       }}
@@ -45,12 +72,17 @@ const Header = ({ bg }) => {
     >
       <Container>
         <nav className="z-50 flex items-center justify-between">
-          <a
-            href="/"
+          <Link
+            activeClass="active"
+            to={"header"}
+            spy={true}
+            smooth={true}
+            offset={50}
+            duration={1000}
             className="cursor-pointer text-[24px] text-white transition-all duration-300"
           >
             Parker Jones
-          </a>
+          </Link>
           <UL />
           <a
             className="hidden text-[16px] font-bold text-white transition-all duration-300 md:block lg:block"

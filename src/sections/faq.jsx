@@ -1,7 +1,6 @@
 import { Container } from "../components/container";
 import { useState } from "react";
 import { Plus, Minus } from "lucide-react";
-import { motion } from "framer-motion";
 
 const Dropdown = ({ text }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -44,19 +43,17 @@ const Dropdown = ({ text }) => {
 const Questions = () => {
   const QUESTIONS = [
     {
-      heading: "What kind of services do you offer?",
+      heading: "What is your background in coding?",
       description:
-        "I offer a wide range of services, including web design, web development, graphic design, brand identity, and more.",
+        "I don't have an official coding background, but i've been actively coding for about a year, primarily working with HTML,CSS,React, and TailwindCSS. During this time, I've completed over 30 projects.",
     },
     {
-      heading: "How do I get started on a project with",
-      description:
-        "Getting started is easy! Simply reach out to me through my socials or contact form on my website. I'll schedule a consultation to discuss your project goals and outline the next steps.",
+      heading: "Where are you located?",
+      description: "I'm located in Kentucky, United States ",
     },
     {
-      heading: "What is the typical timeline for a project?",
-      description:
-        "Project timelines depend on the scope and requirements. I work efficiently to deliver quality results, and timelines are discussed during the project consultation.",
+      heading: "How old are you?",
+      description: "I am 20 years old born in 2004, april 16.",
     },
   ];
 
@@ -71,7 +68,7 @@ const Questions = () => {
 
 const Faq = () => {
   return (
-    <section className="flex w-full justify-center bg-[#FFFFFF] py-24">
+    <section id="faq" className="flex w-full justify-center bg-[#FFFFFF] py-24">
       <Container className={"flex flex-col items-center justify-center gap-6"}>
         <h2 className="text-4xl font-semibold text-[11181C] lg:text-center lg:text-5xl">
           Frequently asked questions

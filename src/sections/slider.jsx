@@ -19,7 +19,7 @@ const Slider = () => {
       <Container>
         <div className="flex gap-8 overflow-hidden">
           <p className="whitespace-nowrap text-[20px] text-[#11181C]">
-            Trusted by
+            Technologys
           </p>
           <div className="flex shrink-0 overflow-hidden">
             {/* slider-1 */}

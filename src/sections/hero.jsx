@@ -71,12 +71,12 @@ const Hero = () => {
           type: "tween",
           stiffness: 20,
           damping: 20,
-          duration: 2,
+          duration: 2.2,
         }}
         onClick={() => setBg(!bg)}
         className=""
         type="button"
-        class="absolute right-1 top-24 cursor-pointer rounded-lg bg-gradient-to-r from-cyan-400 via-cyan-500 to-cyan-600 px-1 py-2 text-center text-sm font-medium text-white shadow-xl shadow-cyan-500/50 hover:bg-gradient-to-br focus:outline-none xl:right-8 xl:top-32 xl:p-3 xl:px-5 xl:py-2.5 dark:shadow-lg dark:shadow-cyan-800/80 dark:focus:ring-cyan-800"
+        class="absolute right-4 top-24 rounded border border-gray-400 bg-white px-4 py-2 font-semibold text-gray-800 shadow hover:bg-gray-100"
       >
         Background
       </motion.button>

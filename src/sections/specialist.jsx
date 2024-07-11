@@ -4,7 +4,10 @@ import { motion } from "framer-motion";
 
 const Specialist = () => {
   return (
-    <section className="relative flex w-full justify-center bg-[#11181C] pt-28">
+    <section
+      id="achievement"
+      className="relative flex w-full justify-center bg-[#11181C] pt-28"
+    >
       <Container className={"flex justify-center"}>
         <div className="z-50 flex flex-col items-center">
           <img
